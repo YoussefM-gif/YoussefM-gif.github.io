@@ -9,27 +9,97 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="about.html">À propos</a></li>
-                <li><a href="projects.html">Projets</a></li>
-                <li><a href="skills.html">Compétences</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="cv.pdf" target="_blank" class="pdf-button">Télécharger mon CV</a></li>
-            </ul>
-        </nav>
+        <div class="menu-container">
+            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="projects.html">Projets</a></li>
+                    <li><a href="skills.html">Compétences</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
-        <section class="skills">
+        <section id="skills" class="skills-section">
             <h2>Mes Compétences</h2>
-            <ul>
-                <li>Développement Web</li>
-                <li>Design UI/UX</li>
-                <li>Consultation en développement</li>
-                <!-- Ajoutez plus de compétences ici -->
-            </ul>
+            <p>Voici un aperçu de mes compétences techniques, outils utilisés et domaines d'expertise que j'ai développés au fil de mes expériences professionnelles et académiques.</p>
+            
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h4>Développement Web</h4>
+                    <p>HTML, CSS, JavaScript, React, Vue.js, Laravel, Node.js</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Design UI/UX</h4>
+                    <p>Figma, Adobe XD, Prototypage, Wireframing, Tests d’utilisabilité</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Outils et Gestion</h4>
+                    <p>Git/GitHub, Docker, MySQL, MongoDB, Gestion de projets (Scrum, Kanban)</p>
+                </div>
+            </div>
+            
+            <h3>Langages et Frameworks</h3>
+            <div class="skills-icons">
+                <div class="skill">
+                    <img src="images/html-icon.png" alt="HTML Icon">
+                    <p>HTML</p>
+                </div>
+                <div class="skill">
+                    <img src="images/css-icon.png" alt="CSS Icon">
+                    <p>CSS</p>
+                </div>
+                <div class="skill">
+                    <img src="images/js-icon.png" alt="JavaScript Icon">
+                    <p>JavaScript</p>
+                </div>
+                <div class="skill">
+                    <img src="images/react-icon.png" alt="React Icon">
+                    <p>React</p>
+                </div>
+                <div class="skill">
+                    <img src="images/python-icon.png" alt="Python Icon">
+                    <p>Python</p>
+                </div>
+                <div class="skill">
+                    <img src="images/php-icon.png" alt="PHP Icon">
+                    <p>PHP</p>
+                </div>
+            </div>
+            
+            <h3>Outils</h3>
+            <div class="skills-icons">
+                <div class="skill">
+                    <img src="images/docker-icon.png" alt="Docker Icon">
+                    <p>Docker</p>
+                </div>
+                <div class="skill">
+                    <img src="images/github-icon.png" alt="GitHub Icon">
+                    <p>GitHub</p>
+                </div>
+                <div class="skill">
+                    <img src="images/mysql-icon.png" alt="MySQL Icon">
+                    <p>MySQL</p>
+                </div>
+                <div class="skill">
+                    <img src="images/mongodb-icon.png" alt="MongoDB Icon">
+                    <p>MongoDB</p>
+                </div>
+                <div class="skill">
+                    <img src="images/figma-icon.png" alt="Figma Icon">
+                    <p>Figma</p>
+                </div>
+                <div class="skill">
+                    <img src="images/adobe-xd-icon.png" alt="Adobe XD Icon">
+                    <p>Adobe XD</p>
+                </div>
+            </div>
         </section>
     </main>
+    <script src="scripts.js"></script>
 </body>
 </html>

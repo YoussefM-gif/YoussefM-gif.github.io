@@ -5,18 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À propos - Youssef M Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="about.html">À propos</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="cv.pdf" target="_blank" class="pdf-button">Télécharger mon CV</a></li>
-            </ul>
-        </nav>
+        <div class="menu-container">
+            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="projects.html">Projets</a></li>
+                    <li><a href="skills.html">Compétences</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         <section class="about">
@@ -24,6 +28,42 @@
             <p>Informations personnelles et professionnelles.</p>
             <!-- Ajoutez plus de détails ici -->
         </section>
+        <section id="about">
+            <h2>À propos de moi</h2>
+            <p>Je suis Meissa Youssef, un développeur Full Stack passionné par la création d'applications intuitives et innovantes. Actuellement étudiant en master à l’Ural Federal University, je cherche à mettre en pratique mes compétences dans des projets ambitieux et collaboratifs.</p>
+            
+            <h3>Informations personnelles</h3>
+            <ul>
+                <li><strong>Nom :</strong> Meissa Youssef</li>
+                <li><strong>Email :</strong> youssef.meissa@mail.ru</li>
+                <li><strong>Téléphone :</strong> +7 918 576 01 93</li>
+                <li><strong>GitHub Pro :</strong> <a href="https://github.com/YoussefM-gif" target="_blank">YoussefM-gif</a></li>
+                <li><strong>GitHub :</strong> <a href="https://github.com/youssefbabe" target="_blank">youssefbabe</a></li>
+            </ul>
+            
+            <h3>Résumé professionnel</h3>
+            <p>En tant que développeur Full Stack, je maîtrise des technologies frontend et backend, incluant React, Node.js, et Python. Mon objectif est de contribuer à des projets innovants en utilisant mes compétences pour résoudre des problèmes réels.</p>
+            
+            <h3>Parcours académique</h3>
+            <ul>
+                <li><strong>Master en Développement et Gestion de Projets Logiciels</strong>, Ural Federal University, Russie (2024 – Présent)</li>
+                <li><strong>Licence en Génie Logiciel</strong>, ISCAE, Mauritanie (2022, mention Très Bien, 17.8/20)</li>
+            </ul>
+            
+            <h3>Compétences techniques</h3>
+            <ul>
+                <li><strong>Langages :</strong> HTML, CSS, JavaScript, PHP, Python, SQL</li>
+                <li><strong>Frameworks :</strong> React, Node.js, Laravel, Docker</li>
+                <li><strong>Outils :</strong> Git, Figma, MySQL, MongoDB</li>
+            </ul>
+            
+            <h3>Centres d’intérêt</h3>
+            <ul>
+                <li>Technologies émergentes et développement durable</li>
+                <li>Intelligence artificielle et expérience utilisateur (UX/UI)</li>
+            </ul>
+        </section>
     </main>
+    <script src="scripts.js"></script>
 </body>
 </html>

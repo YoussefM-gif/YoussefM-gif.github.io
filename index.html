@@ -8,30 +8,27 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="about.html">À propos</a></li>
-                <li><a href="skills.html">Compétences</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="menu-container">
+            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="projects.html">Projets</a></li>
+                    <li><a href="skills.html">Compétences</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <div class="container buttons">
-        <img src="images/youssef.png" alt="Photo de Youssef" class="profile-photo">
+    <div class="container profile-card buttons">
+        <img src="images/youssef.png" alt="Photo de Youssef" class="profile-photo profile-picture">
         <h1>Développeur Full Stack passionné par la création d'applications innovantes</h1>
-        <a href="#projects" class="cta-button view-projects">Voir mes projets</a>
+        <a href="projects.html" class="cta-button view-projects">Voir mes projets</a>
         <a href="assets/cv.pdf" class="pdf-button download-cv">Télécharger mon CV</a>
     </div>
-    <section id="projects" class="projects">
-        <h2>Mes Projets</h2>
-        <div class="project-card">
-            <img src="images/project1.png" alt="Project 1">
-            <h3>Nom du Projet 1</h3>
-            <p>Description courte du projet. Technologies utilisées : HTML, CSS, JavaScript.</p>
-            <a href="https://lien-vers-le-projet.com" target="_blank">Voir le projet</a>
-        </div>
-        <!-- Ajoutez plus de projets ici -->
-    </section>
+    
+    <script src="scripts.js"></script>
 </body>
 </html>

@@ -9,34 +9,49 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="about.html">À propos</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="cv.pdf" target="_blank" class="pdf-button">Télécharger mon CV</a></li>
-            </ul>
-        </nav>
+        <div class="menu-container">
+            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="projects.html">Projets</a></li>
+                    <li><a href="skills.html">Compétences</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
-        <section class="services">
+        <section id="services" class="services-section">
             <h2>Mes Services</h2>
-            <div class="service-item">
-                <h3>Développement Web</h3>
-                <p>Création de sites web modernes et réactifs.</p>
-                <p class="price">À partir de 500€</p>
-            </div>
-            <div class="service-item">
-                <h3>Design</h3>
-                <p>Design graphique et UI/UX.</p>
-                <p class="price">À partir de 300€</p>
-            </div>
-            <div class="service-item">
-                <h3>Conseils</h3>
-                <p>Consultation et conseils en développement.</p>
-                <p class="price">À partir de 100€/heure</p>
+            <p>Je propose une variété de services pour répondre à vos besoins numériques, du développement web au design UI/UX et aux consultations spécialisées.</p>
+            <div class="services">
+                <div class="service">
+                    <img src="images/web-dev-icon.png" alt="Développement Web">
+                    <h3>Développement Web</h3>
+                    <p>Création de sites web modernes et réactifs.</p>
+                    <p><strong>À partir de 500€</strong></p>
+                    <a href="#contact" class="btn">Demander un devis</a>
+                </div>
+                <div class="service">
+                    <img src="images/uiux-icon.png" alt="Design UI/UX">
+                    <h3>Design</h3>
+                    <p>Design graphique et UI/UX.</p>
+                    <p><strong>À partir de 300€</strong></p>
+                    <a href="#contact" class="btn">Demander un devis</a>
+                </div>
+                <div class="service">
+                    <img src="images/consulting-icon.png" alt="Consultation en Développement">
+                    <h3>Conseils</h3>
+                    <p>Consultation et conseils en développement.</p>
+                    <p><strong>À partir de 100€/heure</strong></p>
+                    <a href="#contact" class="btn">Demander un devis</a>
+                </div>
             </div>
         </section>
     </main>
+    <script src="scripts.js"></script>
 </body>
 </html>
