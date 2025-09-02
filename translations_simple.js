@@ -20,10 +20,12 @@ const translations = {
             description: "Développeur Full Stack avec une passion pour les technologies modernes."
         },
         projects: {
-            title: "Mes Projets"
+            title: "Mes Projets",
+            quickNav: "Navigation rapide :"
         },
         project1: {
             sectionTitle: "Projet 1: MauritUrgence - Application de Gestion de la Protection Civile",
+            navLink: "MauritUrgence - Application de Gestion de la Protection Civile",
             title: "Projet 1: MauritUrgence - Application de Gestion de la Protection Civile",
             context: "Contexte :",
             contextDesc: "Projet de fin d'études - ISCAE Nouakchott, Mauritanie",
@@ -83,6 +85,7 @@ const translations = {
         },
         project2: {
             sectionTitle: "Projet 2: Service de Réservation de Coworking en Ligne",
+            navLink: "Service de Réservation de Coworking en Ligne",
             title: "Projet 2: Service de Réservation de Coworking en Ligne",
             context: "Contexte :",
             contextDesc: "Projet collaboratif université-entreprise",
@@ -128,6 +131,7 @@ const translations = {
         },
         project3: {
             sectionTitle: "Projet 3: Visual Org Structure - Visualisation de Structures Organisationnelles",
+            navLink: "Visual Org Structure - Visualisation de Structures Organisationnelles",
             title: "Projet 3: Visual Org Structure - Visualisation de Structures Organisationnelles",
             context: "Contexte :",
             contextDesc: "Projet d'équipe - Développement produit logiciel",
@@ -222,10 +226,12 @@ const translations = {
             description: "Full Stack Developer with a passion for modern technologies."
         },
         projects: {
-            title: "My Projects"
+            title: "My Projects",
+            quickNav: "Quick navigation:"
         },
         project1: {
             sectionTitle: "Project 1: MauritUrgence - Civil Protection Management Application",
+            navLink: "MauritUrgence - Civil Protection Management Application",
             title: "Project 1: MauritUrgence - Civil Protection Management Application",
             context: "Context:",
             contextDesc: "Final year project - ISCAE Nouakchott, Mauritania",
@@ -285,6 +291,7 @@ const translations = {
         },
         project2: {
             sectionTitle: "Project 2: Online Coworking Space Booking Service",
+            navLink: "Online Coworking Space Booking Service",
             title: "Project 2: Online Coworking Space Booking Service",
             context: "Context:",
             contextDesc: "University-company collaborative project",
@@ -330,6 +337,7 @@ const translations = {
         },
         project3: {
             sectionTitle: "Project 3: Visual Org Structure - Organizational Structure Visualization",
+            navLink: "Visual Org Structure - Organizational Structure Visualization",
             title: "Project 3: Visual Org Structure - Organizational Structure Visualization",
             context: "Context:",
             contextDesc: "Team project - Software product development",

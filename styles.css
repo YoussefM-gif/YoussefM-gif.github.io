@@ -1811,3 +1811,228 @@ form button:hover {
         margin-bottom: 40px;
     }
 }
+
+/* Modern Project Navigation Styles */
+.project-navigation {
+    margin: 40px 0 60px 0;
+    padding: 0;
+}
+
+.project-navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-navigation li {
+    margin: 0;
+}
+
+.project-navigation a {
+    display: block;
+    text-decoration: none;
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.1) 0%, rgba(255, 0, 255, 0.1) 100%);
+    border: 2px solid transparent;
+    border-radius: 15px;
+    padding: 20px 25px;
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 255, 255, 0.1);
+}
+
+.project-navigation a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+.project-navigation a::after {
+    content: '→';
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: var(--accent-color);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.project-navigation a:hover {
+    transform: translateY(-5px) scale(1.02);
+    border-color: var(--accent-color);
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.2) 0%, rgba(255, 0, 255, 0.2) 100%);
+    box-shadow: 0 15px 40px rgba(0, 255, 255, 0.3);
+    color: #ffffff;
+}
+
+.project-navigation a:hover::before {
+    left: 100%;
+}
+
+.project-navigation a:hover::after {
+    opacity: 1;
+    transform: translateY(-50%) translateX(5px);
+}
+
+.project-navigation a:active {
+    transform: translateY(-2px) scale(1.01);
+}
+
+/* Project numbers styling */
+.project-navigation a:nth-child(1)::before {
+    background: linear-gradient(90deg, transparent, rgba(255, 107, 107, 0.3), transparent);
+}
+
+.project-navigation a:nth-child(2)::before {
+    background: linear-gradient(90deg, transparent, rgba(52, 211, 153, 0.3), transparent);
+}
+
+.project-navigation a:nth-child(3)::before {
+    background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.3), transparent);
+}
+
+/* Add project icons */
+.project-navigation li:nth-child(1) a {
+    padding-left: 60px;
+}
+
+.project-navigation li:nth-child(1) a::before {
+    content: '🚨';
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    z-index: 2;
+    background: none;
+    width: auto;
+    height: auto;
+}
+
+.project-navigation li:nth-child(2) a {
+    padding-left: 60px;
+}
+
+.project-navigation li:nth-child(2) a::before {
+    content: '🏢';
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    z-index: 2;
+    background: none;
+    width: auto;
+    height: auto;
+}
+
+.project-navigation li:nth-child(3) a {
+    padding-left: 60px;
+}
+
+.project-navigation li:nth-child(3) a::before {
+    content: '📊';
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    z-index: 2;
+    background: none;
+    width: auto;
+    height: auto;
+}
+
+/* Hover effects for individual projects */
+.project-navigation li:nth-child(1) a:hover::before {
+    background: linear-gradient(90deg, transparent, rgba(255, 107, 107, 0.3), transparent);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    content: '';
+    font-size: inherit;
+    animation: slideEffect 0.6s ease;
+}
+
+.project-navigation li:nth-child(2) a:hover::before {
+    background: linear-gradient(90deg, transparent, rgba(52, 211, 153, 0.3), transparent);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    content: '';
+    font-size: inherit;
+    animation: slideEffect 0.6s ease;
+}
+
+.project-navigation li:nth-child(3) a:hover::before {
+    background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.3), transparent);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    content: '';
+    font-size: inherit;
+    animation: slideEffect 0.6s ease;
+}
+
+@keyframes slideEffect {
+    from { left: -100%; }
+    to { left: 100%; }
+}
+
+/* Mobile responsiveness for navigation */
+@media (max-width: 768px) {
+    .project-navigation ul {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .project-navigation a {
+        padding: 18px 20px 18px 55px;
+        font-size: 14px;
+    }
+    
+    .project-navigation a::after {
+        right: 20px;
+        font-size: 18px;
+    }
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Add pulse animation on page load */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.project-navigation a {
+    animation: pulse 2s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 0.2s);
+}
+
+.project-navigation li:nth-child(1) a { --i: 0; }
+.project-navigation li:nth-child(2) a { --i: 1; }
+.project-navigation li:nth-child(3) a { --i: 2; }
