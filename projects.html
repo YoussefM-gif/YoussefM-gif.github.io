@@ -3,59 +3,519 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projets - Youssef M Portfolio</title>
+    <title data-translate="projects.title">Projets - Youssef M Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="menu-container">
+        <div class="header-left">
+            <h2>Youssef M</h2>
+        </div>
+        <div class="header-right">
+            <select class="language-selector" id="languageSelector">
+                <option value="fr">🇫🇷 Français</option>
+                <option value="en">🇬🇧 English</option>
+            </select>
             <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
             <nav class="nav-links">
                 <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="about.html">À propos</a></li>
-                    <li><a href="projects.html">Projets</a></li>
-                    <li><a href="skills.html">Compétences</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html" data-translate="nav.home">Accueil</a></li>
+                    <li><a href="about.html" data-translate="nav.about">À propos</a></li>
+                    <li><a href="projects.html" data-translate="nav.projects">Projets</a></li>
+                    <li><a href="skills.html" data-translate="nav.skills">Compétences</a></li>
+                    <li><a href="services.html" data-translate="nav.services">Services</a></li>
+                    <li><a href="contact.html" data-translate="nav.contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-        <section id="projects" class="projects">
-            <h2>Mes Projets</h2>
-            <div class="project-card">
-                <img src="images/project1.png" alt="Project 1">
-                <h3>Nom du Projet 1</h3>
-                <p>Description courte du projet. Technologies utilisées : HTML, CSS, JavaScript.</p>
-                <a href="https://lien-vers-le-projet.com" target="_blank">Voir le projet</a>
+        <section class="projects">
+            <div class="container">
+                <h2 data-translate="projects.title">Mes Projets</h2>
             </div>
-            <!-- Ajoutez plus de projets ici -->
         </section>
-        <section id="projects" class="projects">
-            <div class="project-card">
-                <h3>Projet 1: Application de Gestion de Tâches</h3>
-                <p><strong>Objectif:</strong> Créer une application web pour gérer les tâches quotidiennes.</p>
-                <p><strong>Rôle:</strong> Développeur Full Stack</p>
-                <p><strong>Outils utilisés:</strong> React, Node.js, MongoDB</p>
-                <p><strong>Résultats obtenus:</strong> Amélioration de la productivité des utilisateurs de 30%.</p>
-            </div>
-            <!-- Ajoutez plus de projets ici -->
-        </section>
+        
+        <!-- Projet 1: MauritUrgence -->
+        <section class="projects">
+            <div class="container">
+                <h3 class="project-section-title" data-translate="project1.sectionTitle">Projet 1: MauritUrgence - Application de Gestion de la Protection Civile</h3>
+                <div class="project-card featured-project">
+                    <div class="project-header">
+                        <div class="project-image">
+                            <img src="images/mauriturgence-demo.png" alt="MauritUrgence Application" loading="lazy">
+                            <div class="project-badges">
+                                <span class="badge featured">Projet 1</span>
+                                <span class="badge graduation">Fin d'Études</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <strong data-translate="project1.context">Contexte :</strong>
+                                <span data-translate="project1.contextDesc">Projet de fin d'études - ISCAE Nouakchott, Mauritanie</span>
+                            </div>
+                            <div class="meta-item">
+                                <strong data-translate="project1.team">Équipe :</strong>
+                                <span data-translate="project1.teamDesc">3 développeurs (Projet collaboratif)</span>
+                            </div>
+                            <div class="meta-item">
+                                <strong data-translate="project1.duration">Durée :</strong>
+                                <span data-translate="project1.durationDesc">6 mois (2022)</span>
+                            </div>
+                        </div>
 
-        <section id="projects" class="projects">
-            <div class="project-card">
-                <h3>Projet 2: Site E-commerce</h3>
-                <p><strong>Objectif:</strong> Développer un site de vente en ligne pour une boutique de vêtements.</p>
-                <p><strong>Rôle:</strong> Développeur Front-End</p>
-                <p><strong>Outils utilisés:</strong> HTML, CSS, JavaScript, Shopify</p>
-                <p><strong>Résultats obtenus:</strong> Augmentation des ventes de 50% en trois mois.</p>
-             </div>
-            <!-- Ajoutez plus de projets ici -->
+                        <p class="project-description" data-translate="project1.description">
+                            Solution complète visant à améliorer la communication entre les citoyens et les services d'urgence en Mauritanie. L'application permet de signaler les dangers avec précision et fiabilité, réduisant les délais d'intervention des services de secours.
+                        </p>
+
+                        <div class="project-features">
+                            <h4 data-translate="project1.featuresTitle">Fonctionnalités principales :</h4>
+                            <ul>
+                                <li data-translate="project1.feature1">📱 Application mobile pour citoyens et agents (Flutter)</li>
+                                <li data-translate="project1.feature2">💻 Interface web d'administration (Laravel)</li>
+                                <li data-translate="project1.feature3">📸 Signalement d'urgence avec géolocalisation et photos</li>
+                                <li data-translate="project1.feature4">👥 Gestion des ressources (agents, véhicules, plannings)</li>
+                                <li data-translate="project1.feature5">🔔 Système de notifications en temps réel</li>
+                                <li data-translate="project1.feature6">📊 Traitement et suivi des interventions</li>
+                            </ul>
+                        </div>
+
+                        <div class="tech-stack">
+                            <h4 data-translate="project1.techTitle">Technologies utilisées :</h4>
+                            <div class="tech-grid">
+                                <div class="tech-category">
+                                    <strong data-translate="project1.mobile">Mobile :</strong>
+                                    <div class="tech-badges">
+                                        <span class="tech-badge flutter">Flutter</span>
+                                        <span class="tech-badge dart">Dart</span>
+                                    </div>
+                                </div>
+                                <div class="tech-category">
+                                    <strong data-translate="project1.backend">Backend :</strong>
+                                    <div class="tech-badges">
+                                        <span class="tech-badge laravel">Laravel</span>
+                                        <span class="tech-badge php">PHP</span>
+                                    </div>
+                                </div>
+                                <div class="tech-category">
+                                    <strong data-translate="project1.frontend">Frontend Web :</strong>
+                                    <div class="tech-badges">
+                                        <span class="tech-badge html">HTML5</span>
+                                        <span class="tech-badge css">CSS3</span>
+                                        <span class="tech-badge js">JavaScript</span>
+                                    </div>
+                                </div>
+                                <div class="tech-category">
+                                    <strong data-translate="project1.database">Base de données :</strong>
+                                    <div class="tech-badges">
+                                        <span class="tech-badge mysql">MySQL</span>
+                                        <span class="tech-badge phpmyadmin">PhpMyAdmin</span>
+                                    </div>
+                                </div>
+                                <div class="tech-category">
+                                    <strong data-translate="project1.methodology">Méthodologie :</strong>
+                                    <div class="tech-badges">
+                                        <span class="tech-badge uml">UML</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-architecture">
+                            <h4 data-translate="project1.architectureTitle">Architecture du système :</h4>
+                            <div class="architecture-grid">
+                                <div class="arch-component">
+                                    <h5 data-translate="project1.mobileApp">📱 Application Mobile</h5>
+                                    <ul>
+                                        <li data-translate="project1.citizenFeatures">Interface citoyens (signalement sans authentification)</li>
+                                        <li data-translate="project1.agentFeatures">Interface agents (planning, profil, notifications)</li>
+                                    </ul>
+                                </div>
+                                <div class="arch-component">
+                                    <h5 data-translate="project1.webPlatform">💻 Plateforme Web</h5>
+                                    <ul>
+                                        <li data-translate="project1.adminFeatures">Administration (gestion des ressources)</li>
+                                        <li data-translate="project1.supportFeatures">Support technique (traitement des urgences)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-technical">
+                            <h4 data-translate="project1.technicalTitle">Documentation technique - Diagrammes UML :</h4>
+                            
+                            <div class="uml-diagrams">
+                                <div class="diagram-section">
+                                    <h5 data-translate="project1.useCaseDiagram">Diagramme de cas d'utilisation</h5>
+                                    <p data-translate="project1.useCaseDesc">Présentation des différents acteurs du système et de leurs interactions avec l'application.</p>
+                                    <div class="diagram-container">
+                                        <img src="images/mauriturgence-cas-utilisation.png" alt="Diagramme de cas d'utilisation MauritUrgence" class="diagram-image">
+                                    </div>
+                                </div>
+
+                                <div class="diagram-section">
+                                    <h5 data-translate="project1.classDiagram">Diagramme de classes</h5>
+                                    <p data-translate="project1.classDesc">Architecture de la base de données avec les entités principales et leurs relations.</p>
+                                    <div class="diagram-container">
+                                        <img src="images/mauriturgence-diagramme-classes.png" alt="Diagramme de classes MauritUrgence" class="diagram-image">
+                                    </div>
+                                </div>
+
+                                <div class="diagrams-row">
+                                    <div class="diagram-section half">
+                                        <h5 data-translate="project1.sequenceAuth">Séquence - Authentification</h5>
+                                        <p data-translate="project1.sequenceAuthDesc">Processus d'authentification des utilisateurs dans le système.</p>
+                                        <div class="diagram-container">
+                                            <img src="images/mauriturgence-sequence-authentification.png" alt="Diagramme de séquence - Authentification" class="diagram-image">
+                                        </div>
+                                    </div>
+
+                                    <div class="diagram-section half">
+                                        <h5 data-translate="project1.sequenceAgent">Séquence - Ajout d'agent</h5>
+                                        <p data-translate="project1.sequenceAgentDesc">Processus d'ajout d'un nouvel agent dans le système.</p>
+                                        <div class="diagram-container">
+                                            <img src="images/mauriturgence-sequence-ajout-agent.png" alt="Diagramme de séquence - Ajout agent" class="diagram-image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-impact">
+                            <h4 data-translate="project1.impactTitle">Impact et résultats :</h4>
+                            <ul>
+                                <li data-translate="project1.impact1">✅ Réduction significative des délais de signalement d'urgence</li>
+                                <li data-translate="project1.impact2">✅ Amélioration de la précision des informations transmises</li>
+                                <li data-translate="project1.impact3">✅ Centralisation efficace de la gestion des ressources</li>
+                                <li data-translate="project1.impact4">✅ Solution adaptée au contexte mauritanien</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="#demo-modal" class="btn primary demo-btn" data-translate="project1.viewDemo">Voir la démo</a>
+                            <a href="https://github.com/YoussefM-gif/Mauri_Urgence" target="_blank" rel="noopener noreferrer" class="btn secondary" data-translate="project1.viewCode">Code source</a>
+                            <a href="assets/Rapport_mauriUrgence.pdf" target="_blank" rel="noopener noreferrer" class="btn tertiary" data-translate="project1.viewDoc">Documentation</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-       
+        
+        <!-- Modal pour la démo vidéo -->
+        <div id="demo-modal" class="info-modal">
+            <div class="modal-content video-modal">
+                <span class="close-info-modal">&times;</span>
+                <h3 data-translate="project1.demoModalTitle">Démonstration MauritUrgence</h3>
+                <p data-translate="project1.demoModalDesc">Découvrez le fonctionnement complet de l'application MauritUrgence à travers cette démonstration vidéo.</p>
+                <div class="video-container">
+                    <video id="mauriturgence-video" controls preload="auto" poster="images/mauriturgence-demo.png" muted>
+                        <source src="videos/videoMauriUrgence.mp4" type="video/mp4">
+                        <p data-translate="project1.videoNotSupported">Votre navigateur ne supporte pas la lecture vidéo. <a href="videos/videoMauriUrgence.mp4" download>Télécharger la vidéo</a></p>
+                    </video>
+                </div>
+                <div class="video-info">
+                    <div class="video-features">
+                        <h4 data-translate="project1.demoModalFeaturesTitle">Ce que vous allez voir :</h4>
+                        <ul>
+                            <li data-translate="project1.demoFeature1">📱 Interface mobile pour citoyens et agents</li>
+                            <li data-translate="project1.demoFeature2">💻 Tableau de bord d'administration web</li>
+                            <li data-translate="project1.demoFeature3">🗺️ Système de géolocalisation en temps réel</li>
+                            <li data-translate="project1.demoFeature4">📊 Gestion des interventions et rapports</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-buttons">
+                    <a href="https://github.com/YoussefM-gif/Mauri_Urgence" target="_blank" class="btn secondary" data-translate="project1.viewGitHub">Voir sur GitHub</a>
+                    <a href="videos/videoMauriUrgence.mp4" download class="btn tertiary" data-translate="project1.downloadVideo">Télécharger la vidéo</a>
+                    <button class="btn primary close-modal-btn" data-translate="project1.closeModal">Fermer</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Projet 2: Service de Coworking -->
+        <section class="projects">
+            <div class="container">
+                <h3 class="project-section-title" data-translate="project2.sectionTitle">Projet 2: Service de Réservation de Coworking en Ligne</h3>
+                <div class="project-card featured-project">
+                    <div class="project-header">
+                        <div class="project-image">
+                            <img src="images/coworking-screenshot4.jpg" alt="Service de Coworking" loading="lazy">
+                            <div class="project-badges">
+                                <span class="badge featured">Projet 2</span>
+                                <span class="badge university">Université-Entreprise</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <strong data-translate="project2.context">Contexte :</strong>
+                                <span data-translate="project2.contextDesc">Projet collaboratif université-entreprise</span>
+                            </div>
+                            <div class="meta-item">
+                                <strong data-translate="project2.university">Université :</strong>
+                                <span data-translate="project2.universityDesc">Ural Federal University (Russie)</span>
+                            </div>
+                            <div class="meta-item">
+                                <strong data-translate="project2.partner">Partenaire :</strong>
+                                <span data-translate="project2.partnerDesc">BRUSNIKA OOO</span>
+                            </div>
+                            <div class="meta-item">
+                                <strong data-translate="project2.program">Programme :</strong>
+                                <span data-translate="project2.programDesc">Software Engineering - Development and Management</span>
+                            </div>
+                            <div class="meta-item">
+                                <strong data-translate="project2.grade">Résultat :</strong>
+                                <span data-translate="project2.gradeDesc">Excellent (Отлично)</span>
+                            </div>
+                        </div>
+
+                        <p class="project-description" data-translate="project2.description">
+                            Développement d'une plateforme de réservation en ligne pour espaces de coworking en collaboration avec l'entreprise BRUSNIKA OOO. Projet d'apprentissage par projet de niveau avancé réalisé dans le cadre du programme d'ingénierie logicielle.
+                        </p>
+
+                        <div class="project-features">
+                            <h4 data-translate="project2.featuresTitle">Fonctionnalités développées :</h4>
+                            <ul>
+                                <li data-translate="project2.feature1">🏢 Système de réservation d'espaces de coworking</li>
+                                <li data-translate="project2.feature2">📅 Gestion des créneaux et disponibilités</li>
+                                <li data-translate="project2.feature3">👥 Interface utilisateur intuitive</li>
+                                <li data-translate="project2.feature4">💳 Système de paiement intégré</li>
+                                <li data-translate="project2.feature5">📊 Tableau de bord administrateur</li>
+                                <li data-translate="project2.feature6">📱 Application responsive multi-plateforme</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-gallery">
+                            <h4 data-translate="project2.galleryTitle">Aperçu du design :</h4>
+                            <p class="gallery-note" data-translate="project2.galleryNote">Captures d'écran de l'interface utilisateur développée</p>
+                            <div class="design-gallery">
+                                <div class="design-item">
+                                    <img src="images/coworking-screenshot1.jpg" alt="Interface de réservation" class="design-image" loading="lazy">
+                                    <p data-translate="project2.screenshot1"></p>
+                                </div>
+                                <div class="design-item">
+                                    <img src="images/coworking-screenshot2.jpg" alt="Tableau de bord" class="design-image" loading="lazy">
+                                    <p data-translate="project2.screenshot2"></p>
+                                </div>
+                                <div class="design-item">
+                                    <img src="images/coworking-screenshot3.jpg" alt="Interface utilisateur" class="design-image" loading="lazy">
+                                    <p data-translate="project2.screenshot3"></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-collaboration">
+                            <h4 data-translate="project2.collaborationTitle">Collaboration université-entreprise :</h4>
+                            <div class="collaboration-grid">
+                                <div class="collaboration-item">
+                                    <h5 data-translate="project2.universityRole">🎓 Université (Ural Federal)</h5>
+                                    <ul>
+                                        <li data-translate="project2.universityItem1">Encadrement académique et méthodologique</li>
+                                        <li data-translate="project2.universityItem2">Formation aux technologies modernes</li>
+                                        <li data-translate="project2.universityItem3">Suivi et évaluation du projet</li>
+                                    </ul>
+                                </div>
+                                <div class="collaboration-item">
+                                    <h5 data-translate="project2.companyRole">🏢 Entreprise (BRUSNIKA OOO)</h5>
+                                    <ul>
+                                        <li data-translate="project2.companyItem1">Besoins réels et spécifications</li>
+                                        <li data-translate="project2.companyItem2">Expertise métier et feedback</li>
+                                        <li data-translate="project2.companyItem3">Environnement professionnel</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-impact">
+                            <h4 data-translate="project2.impactTitle">Compétences acquises :</h4>
+                            <ul>
+                                <li data-translate="project2.impact1">✅ Développement en environnement professionnel</li>
+                                <li data-translate="project2.impact2">✅ Collaboration université-entreprise</li>
+                                <li data-translate="project2.impact3">✅ Gestion de projet avancée</li>
+                                <li data-translate="project2.impact4">✅ Technologies de réservation en ligne</li>
+                                <li data-translate="project2.impact5">✅ Excellence académique reconnue</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://www.figma.com/design/GaoWpQl7P4L595Hgbi6RJX/User-Flow-Urfu-Coworking-Rejected?node-id=33-444&p=f&m=draw" target="_blank" rel="noopener noreferrer" class="btn secondary" data-translate="project2.viewDesign">Design & Prototypes</a>
+                            <a href="assets/Certificate-S1.pdf" target="_blank" rel="noopener noreferrer" class="btn primary" data-translate="project2.viewCertificate">Certificat officiel</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projet 3: Visual Org Structure -->
+        <section class="projects">
+            <div class="container">
+                <h3 class="project-section-title" data-translate="project3.sectionTitle">Projet 3: Visual Org Structure - Visualisation de Structures Organisationnelles</h3>
+                <div class="project-card featured-project">
+                    <div class="project-header">
+                        <div class="project-image">
+                            <img src="images/org1.png" alt="Visual Org Structure" loading="lazy">
+                            <div class="project-badges">
+                                <span class="badge featured">Projet 3</span>
+                                <span class="badge team">Équipe 5 personnes</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <strong data-translate="project3.context">Contexte :</strong>
+                                <span data-translate="project3.contextDesc">Projet d'équipe - Développement produit logiciel</span>
+                            </div>
+                            <div class="meta-item">
+                                <strong data-translate="project3.team">Équipe :</strong>
+                                <span data-translate="project3.teamDesc">5 développeurs (2 Front-End, 2 Back-End, 1 Designer/Team Leader)</span>
+                            </div>
+                            <div class="meta-item">
+                                <strong data-translate="project3.role">Mon rôle :</strong>
+                                <span data-translate="project3.roleDesc">Développeur Front-End (TypeScript/Interface utilisateur)</span>
+                            </div>
+                            <div class="meta-item">
+                                <strong data-translate="project3.methodology">Méthodologie :</strong>
+                                <span data-translate="project3.methodologyDesc">Agile - Tableau Kanban</span>
+                            </div>
+                        </div>
+
+                        <p class="project-description" data-translate="project3.description">
+                            Développement d'un produit logiciel capable de générer des représentations visuelles des structures organisationnelles d'entreprise. Le projet visait à résoudre les limitations des systèmes existants comme 1C en offrant une gestion hiérarchique complexe (jusqu'à 5 niveaux) avec navigation intuitive.
+                        </p>
+
+                        <div class="project-features">
+                            <h4 data-translate="project3.featuresTitle">Objectifs du projet :</h4>
+                            <ul>
+                                <li data-translate="project3.feature1">🏗️ Création de MVP (Minimum Viable Product)</li>
+                                <li data-translate="project3.feature2">🗂️ Gestion de hiérarchies complexes (5 niveaux)</li>
+                                <li data-translate="project3.feature3">💾 Sauvegarde en base de données</li>
+                                <li data-translate="project3.feature4">🔍 Navigation aisée dans les structures changeantes</li>
+                                <li data-translate="project3.feature5">📊 Visualisations interactives d'organigrammes</li>
+                                <li data-translate="project3.feature6">⚡ Résolution des limitations des systèmes existants</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-responsibilities">
+                            <h4 data-translate="project3.responsibilitiesTitle">Mes responsabilités Front-End :</h4>
+                            <div class="responsibilities-grid">
+                                <div class="responsibility-category">
+                                    <strong data-translate="project3.init">🚀 Initialisation :</strong>
+                                    <ul>
+                                        <li data-translate="project3.initItem1">Configuration du projet front-end</li>
+                                        <li data-translate="project3.initItem2">Analyse des solutions open-source</li>
+                                    </ul>
+                                </div>
+                                <div class="responsibility-category">
+                                    <strong data-translate="project3.development">💻 Développement :</strong>
+                                    <ul>
+                                        <li data-translate="project3.devItem1">Preuve de concept (PoC) du module front-end</li>
+                                        <li data-translate="project3.devItem2">Code TypeScript pour contenu dynamique</li>
+                                        <li data-translate="project3.devItem3">Module d'appel au serveur</li>
+                                    </ul>
+                                </div>
+                                <div class="responsibility-category">
+                                    <strong data-translate="project3.interface">🎨 Interface :</strong>
+                                    <ul>
+                                        <li data-translate="project3.interfaceItem1">Implémentation de l'interface utilisateur</li>
+                                        <li data-translate="project3.interfaceItem2">Intégration API</li>
+                                        <li data-translate="project3.interfaceItem3">Tests et couverture du module</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tech-stack">
+                            <h4 data-translate="project3.techTitle">Technologies utilisées :</h4>
+                            <div class="tech-grid">
+                                <div class="tech-category">
+                                    <strong data-translate="project3.frontend">Front-End :</strong>
+                                    <div class="tech-badges">
+                                        <span class="tech-badge typescript">TypeScript</span>
+                                        <span class="tech-badge html">HTML5</span>
+                                        <span class="tech-badge css">CSS3</span>
+                                    </div>
+                                </div>
+                                <div class="tech-category">
+                                    <strong data-translate="project3.design">Design :</strong>
+                                    <div class="tech-badges">
+                                        <span class="tech-badge figma">Figma</span>
+                                    </div>
+                                </div>
+                                <div class="tech-category">
+                                    <strong data-translate="project3.management">Gestion :</strong>
+                                    <div class="tech-badges">
+                                        <span class="tech-badge kanban">Kanban</span>
+                                        <span class="tech-badge git">Git</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-team">
+                            <h4 data-translate="project3.teamTitle">Composition de l'équipe :</h4>
+                            <div class="team-grid">
+                                <div class="team-member">
+                                    <h5 data-translate="project3.frontendTeam">👨‍💻 Front-End</h5>
+                                    <ul>
+                                        <li>Денисов Ефим (Denisov Efim)</li>
+                                        <li>Меисса Юссуф (Meissa Youssouf)</li>
+                                    </ul>
+                                </div>
+                                <div class="team-member">
+                                    <h5 data-translate="project3.backendTeam">⚙️ Back-End</h5>
+                                    <ul>
+                                        <li>Эли Вети (Eli Veti)</li>
+                                        <li>Соколков Алексей (Sokolkov Alexey)</li>
+                                    </ul>
+                                </div>
+                                <div class="team-member">
+                                    <h5 data-translate="project3.designTeam">🎨 Design & Leadership</h5>
+                                    <ul>
+                                        <li>Коломыцева Ирина (Kolomyceva Irina)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-results">
+                            <h4 data-translate="project3.resultsTitle">Résultats obtenus :</h4>
+                            <ul>
+                                <li data-translate="project3.result1">✅ Prototype d'interface utilisateur créé dans Figma</li>
+                                <li data-translate="project3.result2">✅ Pages principales du site web opérationnelles</li>
+                                <li data-translate="project3.result3">✅ Affichage de la structure de l'équipe de développement</li>
+                                <li data-translate="project3.result4">✅ Système de témoignages d'utilisateurs</li>
+                                <li data-translate="project3.result5">✅ MVP fonctionnel avec base de données</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-impact">
+                            <h4 data-translate="project3.impactTitle">Compétences développées :</h4>
+                            <ul>
+                                <li data-translate="project3.impact1">✅ Développement front-end en TypeScript avancé</li>
+                                <li data-translate="project3.impact2">✅ Travail en équipe agile (Kanban)</li>
+                                <li data-translate="project3.impact3">✅ Intégration API et communication serveur</li>
+                                <li data-translate="project3.impact4">✅ Tests et qualité logicielle</li>
+                                <li data-translate="project3.impact5">✅ Collaboration internationale multiculturelle</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/arcticsixxx/visual-org-structure" target="_blank" rel="noopener noreferrer" class="btn primary" data-translate="project3.viewCode">Code source GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    <script src="translations_simple.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>

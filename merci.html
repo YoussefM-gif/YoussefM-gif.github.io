@@ -3,29 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Merci</title>
-    <style>
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            padding: 50px;
-            background-color: #f9f9f9;
-        }
-        h1 {
-            color: #333;
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Merci - Youssef M Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Merci pour votre message !</h1>
-    <p>Je vous contacterai bientôt.</p>
-    <a href=".html">Retour à l'accueil</a>
+    <header>
+        <div class="header-left">
+            <h2>Youssef M</h2>
+        </div>
+        <div class="header-right">
+            <select class="language-selector" id="languageSelector">
+                <option value="fr">🇫🇷 Français</option>
+                <option value="en">🇬🇧 English</option>
+            </select>
+            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="index.html" data-translate="nav.home">Accueil</a></li>
+                    <li><a href="about.html" data-translate="nav.about">À propos</a></li>
+                    <li><a href="projects.html" data-translate="nav.projects">Projets</a></li>
+                    <li><a href="skills.html" data-translate="nav.skills">Compétences</a></li>
+                    <li><a href="services.html" data-translate="nav.services">Services</a></li>
+                    <li><a href="contact.html" data-translate="nav.contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1 data-translate="thanks.title">🎉 Merci pour votre message !</h1>
+            <p data-translate="thanks.message">Votre message a été envoyé avec succès. Je vous contacterai très bientôt.</p>
+            <div class="buttons">
+                <a href="index.html" class="cta-button" data-translate="thanks.backHome">Retour à l'accueil</a>
+                <a href="projects.html" class="pdf-button" data-translate="thanks.viewProjects">Voir mes projets</a>
+            </div>
+        </div>
+    </main>
+    <script src="translations.js"></script>
+    <script src="translations_simple.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>

@@ -3,32 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Youssef M Portfolio</title>
+    <title data-translate="home.title">Youssef M - Développeur Full Stack</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="menu-container">
+        <div class="header-left">
+            <h2>Youssef M</h2>
+        </div>
+        <div class="header-right">
+            <select class="language-selector" id="languageSelector">
+                <option value="fr">🇫🇷 Français</option>
+                <option value="en">🇬🇧 English</option>
+            </select>
             <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
             <nav class="nav-links">
                 <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="about.html">À propos</a></li>
-                    <li><a href="projects.html">Projets</a></li>
-                    <li><a href="skills.html">Compétences</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html" data-translate="nav.home">Accueil</a></li>
+                    <li><a href="about.html" data-translate="nav.about">À propos</a></li>
+                    <li><a href="projects.html" data-translate="nav.projects">Projets</a></li>
+                    <li><a href="skills.html" data-translate="nav.skills">Compétences</a></li>
+                    <li><a href="services.html" data-translate="nav.services">Services</a></li>
+                    <li><a href="contact.html" data-translate="nav.contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <div class="container profile-card buttons">
-        <img src="images/youssef.png" alt="Photo de Youssef" class="profile-photo profile-picture">
-        <h1>Développeur Full Stack passionné par la création d'applications innovantes</h1>
-        <a href="projects.html" class="cta-button view-projects">Voir mes projets</a>
-        <a href="assets/cv.pdf" class="pdf-button download-cv">Télécharger mon CV</a>
+    <div class="container profile-card">
+        <img src="images/youssef.png" alt="Youssef M" class="profile-photo">
+        <h1 data-translate="hero.title">Salut, je suis Youssef M</h1>
+        <p data-translate="hero.subtitle">Développeur Full Stack passionné par la création d'applications web modernes et innovantes.</p>
+        <div class="buttons">
+            <a href="projects.html" class="view-projects" data-translate="hero.viewProjects">Voir mes projets</a>
+            <a href="assets/cv.pdf" class="download-cv" data-translate="hero.downloadCV">Télécharger CV</a>
+        </div>
     </div>
     
+    <script src="translations_simple.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>

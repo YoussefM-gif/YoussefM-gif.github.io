@@ -1,0 +1,71 @@
+<svg width="400" height="250" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="coworkingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5D9CEC;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="screenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2C3E50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34495E;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="250" fill="url(#coworkingGradient)"/>
+  
+  <!-- Building base -->
+  <rect x="50" y="150" width="300" height="80" fill="#ECF0F1" stroke="#BDC3C7" stroke-width="2"/>
+  
+  <!-- Building windows -->
+  <rect x="70" y="170" width="25" height="25" fill="#3498DB" opacity="0.7"/>
+  <rect x="110" y="170" width="25" height="25" fill="#3498DB" opacity="0.7"/>
+  <rect x="150" y="170" width="25" height="25" fill="#3498DB" opacity="0.7"/>
+  <rect x="190" y="170" width="25" height="25" fill="#3498DB" opacity="0.7"/>
+  <rect x="230" y="170" width="25" height="25" fill="#3498DB" opacity="0.7"/>
+  <rect x="270" y="170" width="25" height="25" fill="#3498DB" opacity="0.7"/>
+  <rect x="310" y="170" width="25" height="25" fill="#3498DB" opacity="0.7"/>
+  
+  <!-- Computer screens showing booking interface -->
+  <rect x="120" y="110" width="60" height="40" fill="url(#screenGradient)" rx="3"/>
+  <rect x="125" y="115" width="50" height="30" fill="#2ECC71"/>
+  <text x="150" y="135" text-anchor="middle" fill="white" font-family="Arial" font-size="8" font-weight="bold">BOOK</text>
+  
+  <rect x="220" y="110" width="60" height="40" fill="url(#screenGradient)" rx="3"/>
+  <rect x="225" y="115" width="50" height="30" fill="#E74C3C"/>
+  <text x="250" y="135" text-anchor="middle" fill="white" font-family="Arial" font-size="8" font-weight="bold">BUSY</text>
+  
+  <!-- Calendar icon -->
+  <rect x="90" y="60" width="40" height="35" fill="white" stroke="#95A5A6" stroke-width="2" rx="3"/>
+  <rect x="95" y="70" width="30" height="20" fill="#3498DB" opacity="0.3"/>
+  <circle cx="100" cy="75" r="1.5" fill="#E74C3C"/>
+  <circle cx="105" cy="75" r="1.5" fill="#2ECC71"/>
+  <circle cx="110" cy="75" r="1.5" fill="#F39C12"/>
+  <circle cx="115" cy="75" r="1.5" fill="#9B59B6"/>
+  <circle cx="120" cy="75" r="1.5" fill="#E74C3C"/>
+  <circle cx="125" cy="75" r="1.5" fill="#2ECC71"/>
+  
+  <!-- Reservation notification -->
+  <circle cx="320" cy="70" r="20" fill="#2ECC71"/>
+  <path d="M315 70 L318 73 L325 66" stroke="white" stroke-width="2" fill="none"/>
+  
+  <!-- WiFi symbol -->
+  <path d="M330 90 Q335 85 340 90" stroke="#95A5A6" stroke-width="2" fill="none"/>
+  <path d="M328 92 Q335 87 342 92" stroke="#95A5A6" stroke-width="2" fill="none"/>
+  <path d="M326 94 Q335 89 344 94" stroke="#95A5A6" stroke-width="2" fill="none"/>
+  <circle cx="335" cy="96" r="1.5" fill="#95A5A6"/>
+  
+  <!-- People silhouettes -->
+  <circle cx="80" cy="125" r="6" fill="#34495E"/>
+  <rect x="77" y="131" width="6" height="12" fill="#34495E"/>
+  
+  <circle cx="360" cy="125" r="6" fill="#34495E"/>
+  <rect x="357" y="131" width="6" height="12" fill="#34495E"/>
+  
+  <!-- Title -->
+  <text x="200" y="30" text-anchor="middle" fill="white" font-family="Arial" font-size="16" font-weight="bold">Service de Coworking</text>
+  <text x="200" y="45" text-anchor="middle" fill="white" font-family="Arial" font-size="12">Réservation en ligne</text>
+  
+  <!-- Company badge -->
+  <rect x="300" y="10" width="85" height="20" fill="rgba(255,255,255,0.9)" rx="10"/>
+  <text x="342" y="22" text-anchor="middle" fill="#2C3E50" font-family="Arial" font-size="9" font-weight="bold">BRUSNIKA</text>
+</svg>

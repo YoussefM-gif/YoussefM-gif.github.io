@@ -3,21 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>À propos - Youssef M Portfolio</title>
+    <title data-translate="about.title">À propos - Youssef M Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="menu-container">
+        <div class="header-left">
+            <h2>Youssef M</h2>
+        </div>
+        <div class="header-right">
+            <select class="language-selector" id="languageSelector">
+                <option value="fr">🇫🇷 Français</option>
+                <option value="en">🇬🇧 English</option>
+            </select>
             <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
             <nav class="nav-links">
                 <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="about.html">À propos</a></li>
-                    <li><a href="projects.html">Projets</a></li>
-                    <li><a href="skills.html">Compétences</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html" data-translate="nav.home">Accueil</a></li>
+                    <li><a href="about.html" data-translate="nav.about">À propos</a></li>
+                    <li><a href="projects.html" data-translate="nav.projects">Projets</a></li>
+                    <li><a href="skills.html" data-translate="nav.skills">Compétences</a></li>
+                    <li><a href="services.html" data-translate="nav.services">Services</a></li>
+                    <li><a href="contact.html" data-translate="nav.contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
                 </ul>
             </nav>
         </div>
@@ -64,6 +75,7 @@
             </ul>
         </section>
     </main>
+    <script src="translations_simple.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>
