@@ -6,11 +6,9 @@ const translations = {
             about: "À propos",
             projects: "Projets",
             skills: "Compétences",
+            experience: "Expérience",
             services: "Services",
             contact: "Contact"
-        },
-        pageTitle: {
-            about: "À propos - Youssef M Portfolio"
         },
         hero: {
             title: "Salut, je suis Youssef M",
@@ -39,6 +37,50 @@ const translations = {
             interests: "Centres d'intérêt",
             interest1: "Technologies émergentes et développement durable",
             interest2: "Intelligence artificielle et expérience utilisateur (UX/UI)"
+        },
+        experience: {
+            title: "Expérience Professionnelle",
+            description: "Découvrez mon parcours professionnel et les expériences qui ont façonné mes compétences en développement et gestion de projets.",
+            exp1: {
+                period: "2024 - Présent",
+                title: "Étudiant Master - Développement et Gestion de Projets Logiciels",
+                company: "Ural Federal University, Russie",
+                task1: "Développement de projets collaboratifs avec l'industrie",
+                task2: "Maîtrise des méthodologies Agile (Scrum, Kanban)",
+                task3: "Travail en équipe internationale multiculturelle",
+                task4: "Spécialisation en TypeScript et développement Front-End"
+            },
+            exp2: {
+                period: "2022",
+                title: "Développeur Full Stack - Projet de Fin d'Études",
+                company: "ISCAE, Mauritanie",
+                task1: "Conception et développement de l'application MauritUrgence",
+                task2: "Développement mobile avec Flutter (Android/iOS)",
+                task3: "Interface web d'administration avec Laravel",
+                task4: "Intégration de géolocalisation et notifications temps réel",
+                task5: "Collaboration en équipe de 3 développeurs"
+            },
+            exp3: {
+                period: "2024",
+                title: "Développeur Front-End - Projet Universitaire-Entreprise",
+                company: "BRUSNIKA OOO x Ural Federal University",
+                task1: "Développement de plateforme de réservation coworking",
+                task2: "Interface utilisateur responsive et intuitive",
+                task3: "Intégration système de paiement",
+                task4: "Tableau de bord administrateur",
+                task5: "Résultat : Mention Excellent (Отлично)"
+            },
+            skillsTitle: "Compétences Développées",
+            technical: "Techniques",
+            management: "Gestion",
+            skill1: "Développement Full Stack",
+            skill2: "Applications mobiles et web",
+            skill3: "Bases de données relationnelles",
+            skill4: "APIs et intégrations",
+            skill5: "Gestion de projets Agile",
+            skill6: "Travail en équipe multiculturelle",
+            skill7: "Communication client-entreprise",
+            skill8: "Résolution de problèmes complexes"
         },
         projects: {
             title: "Mes Projets",
@@ -205,7 +247,16 @@ const translations = {
             viewCode: "Code source GitHub"
         },
         skills: {
-            title: "Mes Compétences"
+            title: "Mes Compétences",
+            description: "Voici un aperçu de mes compétences techniques, outils utilisés et domaines d'expertise que j'ai développés au fil de mes expériences professionnelles et académiques.",
+            webDevelopment: "Développement Web",
+            webDevelopmentDesc: "HTML, CSS, JavaScript, React, Vue.js, Laravel, Node.js",
+            uiuxDesign: "Design UI/UX",
+            uiuxDesignDesc: "Figma, Adobe XD, Prototypage, Wireframing, Tests d'utilisabilité",
+            toolsManagement: "Outils et Gestion",
+            toolsManagementDesc: "Git/GitHub, Docker, MySQL, MongoDB, Gestion de projets (Scrum, Kanban)",
+            languagesFrameworks: "Langages et Frameworks",
+            tools: "Outils"
         },
         services: {
             title: "Mes Services"
@@ -233,11 +284,9 @@ const translations = {
             about: "About",
             projects: "Projects", 
             skills: "Skills",
+            experience: "Experience",
             services: "Services",
             contact: "Contact"
-        },
-        pageTitle: {
-            about: "About - Youssef M Portfolio"
         },
         hero: {
             title: "Hi, I'm Youssef M",
@@ -266,6 +315,50 @@ const translations = {
             interests: "Interests",
             interest1: "Emerging technologies and sustainable development",
             interest2: "Artificial intelligence and user experience (UX/UI)"
+        },
+        experience: {
+            title: "Professional Experience",
+            description: "Discover my professional journey and the experiences that have shaped my skills in development and project management.",
+            exp1: {
+                period: "2024 - Present",
+                title: "Master's Student - Software Development and Project Management",
+                company: "Ural Federal University, Russia",
+                task1: "Development of collaborative projects with industry",
+                task2: "Mastery of Agile methodologies (Scrum, Kanban)",
+                task3: "Working in multicultural international teams",
+                task4: "Specialization in TypeScript and Front-End development"
+            },
+            exp2: {
+                period: "2022",
+                title: "Full Stack Developer - Final Year Project",
+                company: "ISCAE, Mauritania",
+                task1: "Design and development of MauritUrgence application",
+                task2: "Mobile development with Flutter (Android/iOS)",
+                task3: "Web administration interface with Laravel",
+                task4: "Integration of geolocation and real-time notifications",
+                task5: "Collaboration in a team of 3 developers"
+            },
+            exp3: {
+                period: "2024",
+                title: "Front-End Developer - University-Company Project",
+                company: "BRUSNIKA OOO x Ural Federal University",
+                task1: "Development of coworking booking platform",
+                task2: "Responsive and intuitive user interface",
+                task3: "Payment system integration",
+                task4: "Administrator dashboard",
+                task5: "Result: Excellent grade (Отлично)"
+            },
+            skillsTitle: "Skills Developed",
+            technical: "Technical",
+            management: "Management",
+            skill1: "Full Stack Development",
+            skill2: "Mobile and web applications",
+            skill3: "Relational databases",
+            skill4: "APIs and integrations",
+            skill5: "Agile project management",
+            skill6: "Multicultural teamwork",
+            skill7: "Client-business communication",
+            skill8: "Complex problem solving"
         },
         projects: {
             title: "My Projects",
@@ -432,7 +525,16 @@ const translations = {
             viewCode: "GitHub Source Code"
         },
         skills: {
-            title: "My Skills"
+            title: "My Skills",
+            description: "Here is an overview of my technical skills, tools used and areas of expertise that I have developed throughout my professional and academic experiences.",
+            webDevelopment: "Web Development",
+            webDevelopmentDesc: "HTML, CSS, JavaScript, React, Vue.js, Laravel, Node.js",
+            uiuxDesign: "UI/UX Design",
+            uiuxDesignDesc: "Figma, Adobe XD, Prototyping, Wireframing, Usability Testing",
+            toolsManagement: "Tools and Management",
+            toolsManagementDesc: "Git/GitHub, Docker, MySQL, MongoDB, Project Management (Scrum, Kanban)",
+            languagesFrameworks: "Languages and Frameworks",
+            tools: "Tools"
         },
         services: {
             title: "My Services"

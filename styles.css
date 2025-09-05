@@ -2036,3 +2036,224 @@ html {
 .project-navigation li:nth-child(1) a { --i: 0; }
 .project-navigation li:nth-child(2) a { --i: 1; }
 .project-navigation li:nth-child(3) a { --i: 2; }
+
+/* Experience Page Styles */
+.experience-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.experience-section h2 {
+    text-align: center;
+    color: var(--accent-color);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, var(--accent-color), #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.experience-section p {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--accent-color), #ff00ff);
+    transform: translateX(-50%);
+}
+
+.experience-item {
+    display: flex;
+    margin-bottom: 50px;
+    align-items: flex-start;
+    position: relative;
+}
+
+.experience-item::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    width: 15px;
+    height: 15px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 20px var(--accent-color);
+    z-index: 2;
+}
+
+.experience-date {
+    flex: 0 0 45%;
+    text-align: right;
+    padding-right: 40px;
+    padding-top: 10px;
+}
+
+.experience-date span {
+    background: var(--card-bg);
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: var(--accent-color);
+    font-weight: bold;
+    border: 1px solid var(--border-color);
+    display: inline-block;
+}
+
+.experience-content {
+    flex: 0 0 45%;
+    padding-left: 40px;
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-primary);
+    transition: all 0.3s ease;
+}
+
+.experience-content:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--accent-color);
+}
+
+.experience-content h3 {
+    color: var(--accent-color);
+    margin: 0 0 10px 0;
+    font-size: 1.3rem;
+}
+
+.experience-content h4 {
+    color: var(--text-secondary);
+    margin: 0 0 20px 0;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.experience-content ul {
+    margin: 0 0 20px 0;
+    padding-left: 20px;
+}
+
+.experience-content li {
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.experience-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-tag {
+    background: rgba(0, 255, 255, 0.1);
+    color: var(--accent-color);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+}
+
+.skills-summary {
+    margin-top: 60px;
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-primary);
+}
+
+.skills-summary h3 {
+    color: var(--accent-color);
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.skill-category h4 {
+    color: var(--accent-color);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-category li {
+    color: var(--text-primary);
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    padding-left: 20px;
+}
+
+.skill-category li::before {
+    content: '▶';
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+}
+
+/* Responsive Design for Experience */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .experience-item {
+        flex-direction: column;
+        margin-left: 50px;
+    }
+    
+    .experience-item::before {
+        left: 30px;
+        transform: none;
+    }
+    
+    .experience-date {
+        text-align: left;
+        padding-right: 0;
+        padding-bottom: 15px;
+        flex: none;
+    }
+    
+    .experience-content {
+        padding-left: 0;
+        flex: none;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
