@@ -9,6 +9,9 @@ const translations = {
             services: "Services",
             contact: "Contact"
         },
+        pageTitle: {
+            about: "À propos - Youssef M Portfolio"
+        },
         hero: {
             title: "Salut, je suis Youssef M",
             subtitle: "Développeur Full Stack passionné par la création d'applications web modernes et innovantes.",
@@ -17,7 +20,25 @@ const translations = {
         },
         about: {
             title: "À propos de moi",
-            description: "Développeur Full Stack avec une passion pour les technologies modernes."
+            description: "Je suis Meissa Youssef, un développeur Full Stack passionné par la création d'applications intuitives et innovantes. Actuellement étudiant en master à l'Ural Federal University, je cherche à mettre en pratique mes compétences dans des projets ambitieux et collaboratifs.",
+            personalInfo: "Informations personnelles",
+            name: "Nom :",
+            email: "Email :",
+            phone: "Téléphone :",
+            githubPro: "GitHub Pro :",
+            github: "GitHub :",
+            professionalSummary: "Résumé professionnel",
+            professionalDesc: "En tant que développeur Full Stack, je maîtrise des technologies frontend et backend, incluant React, Node.js, et Python. Mon objectif est de contribuer à des projets innovants en utilisant mes compétences pour résoudre des problèmes réels.",
+            education: "Parcours académique",
+            masterDegree: "Master en Développement et Gestion de Projets Logiciels",
+            bachelorDegree: "Licence en Génie Logiciel",
+            technicalSkills: "Compétences techniques",
+            languages: "Langages :",
+            frameworks: "Frameworks :",
+            tools: "Outils :",
+            interests: "Centres d'intérêt",
+            interest1: "Technologies émergentes et développement durable",
+            interest2: "Intelligence artificielle et expérience utilisateur (UX/UI)"
         },
         projects: {
             title: "Mes Projets",
@@ -215,6 +236,9 @@ const translations = {
             services: "Services",
             contact: "Contact"
         },
+        pageTitle: {
+            about: "About - Youssef M Portfolio"
+        },
         hero: {
             title: "Hi, I'm Youssef M",
             subtitle: "Full Stack Developer passionate about creating modern and innovative web applications.",
@@ -223,7 +247,25 @@ const translations = {
         },
         about: {
             title: "About me",
-            description: "Full Stack Developer with a passion for modern technologies."
+            description: "I am Meissa Youssef, a Full Stack developer passionate about creating intuitive and innovative applications. Currently a master's student at Ural Federal University, I seek to put my skills into practice in ambitious and collaborative projects.",
+            personalInfo: "Personal Information",
+            name: "Name:",
+            email: "Email:",
+            phone: "Phone:",
+            githubPro: "GitHub Pro:",
+            github: "GitHub:",
+            professionalSummary: "Professional Summary",
+            professionalDesc: "As a Full Stack developer, I master frontend and backend technologies, including React, Node.js, and Python. My goal is to contribute to innovative projects using my skills to solve real problems.",
+            education: "Academic Background",
+            masterDegree: "Master's in Software Development and Project Management",
+            bachelorDegree: "Bachelor's in Software Engineering",
+            technicalSkills: "Technical Skills",
+            languages: "Languages:",
+            frameworks: "Frameworks:",
+            tools: "Tools:",
+            interests: "Interests",
+            interest1: "Emerging technologies and sustainable development",
+            interest2: "Artificial intelligence and user experience (UX/UI)"
         },
         projects: {
             title: "My Projects",
