@@ -763,8 +763,29 @@ form button:hover {
     }
 }
 
+/* Responsive Media Queries pour tablettes */
+@media (max-width: 767px) and (min-width: 481px) {
+    body {
+        padding-top: 85px;
+    }
+    
+    .profile-card {
+        margin: 25px auto;
+        padding: 30px;
+    }
+    
+    .container {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+}
+
 @media (max-width: 1023px) and (min-width: 768px) {
     /* Tablette: langue visible, menu compressé */
+    body {
+        padding-top: 80px;
+    }
+    
     .nav-links {
         display: none;
         position: absolute;
@@ -895,11 +916,20 @@ form button:hover {
 
 @media (max-width: 480px) {
     body {
-        padding-top: 60px;
+        padding-top: 80px;
     }
 
     header {
         padding: 8px 10px;
+    }
+
+    .header-left h2 {
+        font-size: 1.2rem;
+    }
+
+    .header-profile-pic {
+        width: 35px;
+        height: 35px;
     }
 
     .language-selector, .lang-toggle {
@@ -909,8 +939,13 @@ form button:hover {
     }
 
     .container {
-        margin: 10px 5px;
+        margin: 20px 5px;
         padding: 15px;
+    }
+
+    .profile-card {
+        margin: 20px auto;
+        padding: 25px;
     }
 
     .profile-photo {
