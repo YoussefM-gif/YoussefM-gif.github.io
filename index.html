@@ -1,47 +1,577 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-translate="home.title">Youssef M - Développeur Full Stack</title>
+    <title>Youssef Meissa | Software Engineer</title>
+    <meta name="description" content="Portfolio of Youssef Meissa, a Software Engineer and Full-Stack Developer specializing in modern web applications, distributed systems, and traceability.">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="header-left">
-            <img src="images/youssef.png" alt="Youssef Meissa" class="header-profile-pic">
-            <h2>Youssef Meissa</h2>
-        </div>
-        <div class="header-right">
-            <select class="language-selector" id="languageSelector">
-                <option value="fr">🇫🇷 Français</option>
-                <option value="en">🇬🇧 English</option>
-            </select>
-            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Youssef M.</a>
             <nav class="nav-links">
-                <ul>
-                    <li><a href="index.html" data-translate="nav.home">Accueil</a></li>
-                    <li><a href="about.html" data-translate="nav.about">À propos</a></li>
-                    <li><a href="projects.html" data-translate="nav.projects">Projets</a></li>
-                    <li><a href="skills.html" data-translate="nav.skills">Compétences</a></li>
-                    <li><a href="experience.html" data-translate="nav.experience">Expérience</a></li>
-                    <li><a href="services.html" data-translate="nav.services">Services</a></li>
-                    <li><a href="contact.html" data-translate="nav.contact">Contact</a></li>
-                </ul>
+                <a href="#about" data-i18n="nav.about">About</a>
+                <a href="#projects" data-i18n="nav.projects">Projects</a>
+                <a href="#skills" data-i18n="nav.skills">Skills</a>
+                <a href="#education" data-i18n="nav.education">Education</a>
+                <a href="#experience" data-i18n="nav.experience">Experience</a>
+                <a href="#achievements" data-i18n="nav.achievements">Achievements</a>
+                <a href="#contact" data-i18n="nav.contact">Contact</a>
             </nav>
+            <div class="header-controls">
+                <select id="lang-switch" class="lang-select">
+                    <option value="en">EN</option>
+                    <option value="fr">FR</option>
+                </select>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
     </header>
-    <div class="container profile-card">
-        <img src="images/youssef.png" alt="Youssef M" class="profile-photo">
-        <h1 data-translate="hero.title">Salut, je suis Youssef M</h1>
-        <p data-translate="hero.subtitle">Développeur Full Stack passionné par la création d'applications web modernes et innovantes.</p>
-        <div class="buttons">
-            <a href="projects.html" class="view-projects" data-translate="hero.viewProjects">Voir mes projets</a>
-            <a href="assets/MeissaYoussef.pdf" class="download-cv" data-translate="hero.downloadCV">Télécharger CV</a>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero section">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <p class="greeting" data-i18n="hero.greeting">Hello, I'm</p>
+                    <h1 class="name">Youssef<br>Meissa</h1>
+                    <h2 class="title" data-i18n="hero.title">Software Engineer<br>& Full-Stack Developer</h2>
+                    <div class="award-badge" data-i18n="hero.award">🏆 Selected among the best graduates of UrFU — Class of 2026</div>
+                    <p class="subtitle" data-i18n="hero.subtitle">I design web applications and distributed systems,<br>with a particular focus on blockchain, IoT,<br>and digital traceability.</p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary" data-i18n="hero.viewProjects">View Projects</a>
+                        <a href="assets/MeissaYoussef.pdf" target="_blank" class="btn btn-outline" data-i18n="hero.downloadCv">Download CV</a>
+                        <a href="#contact" class="btn-text item-contact" data-i18n="hero.contactMe">Contact Me →</a>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-i18n="hero.stats.note">91.46/100</span>
+                            <span class="stat-label" data-i18n="hero.stats.gpa">Final Weighted Average</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label" data-i18n="hero.stats.publications">Research Contributions</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">4</span>
+                            <span class="stat-label" data-i18n="hero.stats.awards">Distinctions & Scholarships</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">4</span>
+                            <span class="stat-label" data-i18n="hero.stats.languages">Languages</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="images/youssef.png" alt="Youssef Meissa profile picture">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title" data-i18n="about.title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p data-i18n="about.p1"> I am a Software Engineer and Full-Stack Developer with a strong academic background and practical experience in building modern applications. I completed my Master's degree in Software Engineering at Ural Federal University, with a focus on software architecture, distributed systems, and real-world problem-solving. </p>          
+                        <p data-i18n="about.p2"> My recent work focuses on the design of blockchain-enabled traceability systems integrating IoT, smart contracts, and formal verification. My Master's thesis explored a conceptual architecture for transparent and verifiable waste lifecycle management. </p>
+                    </div>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-code"></i>
+                            <h3 data-i18n="about.highlight1.title">Full-Stack Development</h3>
+                            <p data-i18n="about.highlight1.desc">End-to-end solutions using React, Vue, Laravel, Node.js, and Python.</p>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-link"></i>
+                            <h3 data-i18n="about.highlight2.title">Distributed Systems</h3>
+                            <p data-i18n="about.highlight2.desc">Building resilient and scalable microservices and APIs.</p>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-cube"></i>
+                            <h3 data-i18n="about.highlight3.title">Blockchain & Traceability</h3>
+                            <p data-i18n="about.highlight3.desc">Leveraging decentralized technologies for verifiable supply chains.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURED PROJECTS SECTION -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="projects.title">Featured Projects</h2>
+                <div class="projects-grid">
+                    
+                    <!-- Project 1 -->
+
+                    <article class="project-card">
+                        <div class="project-image">
+                           <img src="images/fig7.png" alt="Architecture app screen" loading="lazy">
+                        </div>
+
+                        <div class="project-info">
+                            <p class="project-type" data-i18n="projects.p1.type">
+                                Master's Thesis · Research Project
+                            </p>
+
+                            <h3 data-i18n="projects.p1.title">
+                                Blockchain-Based Waste Lifecycle Traceability System
+                            </h3>
+
+                            <p class="project-desc" data-i18n="projects.p1.desc">
+                                Master’s research project focused on the design and analytical evaluation of a blockchain-enabled architecture for waste lifecycle traceability. The proposed framework integrates IoT data, smart contracts, digital traceability, and formal verification concepts to improve transparency, accountability, and data integrity in circular-economy systems.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>Blockchain</span>
+                                <span>IoT</span>
+                                <span>Digital Traceability</span>
+                                <span>Formal Verification</span>
+                            </div>
+
+                            <div class="project-links">
+                                <a
+                                    href="assets/Youssef-Meissa-Master-Thesis.pdf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="btn-text"
+                                    data-i18n="projects.p1.report"
+                                >
+                                    View Thesis Report <i class="fas fa-file-pdf"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="images/mauriturgence-demo.png" alt="MauritUrgence app screen" loading="lazy">
+                        </div>
+                        <div class="project-info">
+                            <h3 data-i18n="projects.p2.title">MauriUrgence</h3>
+                            <p class="project-desc" data-i18n="projects.p2.desc">An innovative mobile and web application for managing medical emergencies in Mauritania. Features precise geolocation for incident reporting, an administration dashboard, and dispatch coordination to reduce emergency response times.</p>
+                            <div class="project-tags">
+                                <span>Flutter</span>
+                                <span>Laravel</span>
+                                <span>MySQL</span>
+                                <span>REST APIs</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="assets/Rapport_mauriUrgence.pdf" target="_blank" class="btn-text" data-i18n="projects.p2.report">View Report <i class="fas fa-file-pdf"></i></a>
+                                <a href="videos/videoMauriUrgence.mp4" target="_blank" class="btn-text" data-i18n="projects.p2.video">Watch Demo <i class="fas fa-play-circle"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="images/coworking-screenshot1.jpg" alt="Coworking platform" loading="lazy" onerror="this.src=''; this.className='img-placeholder'; this.outerHTML='<div class=\'img-placeholder\'><i class=\'fas fa-laptop-house\'></i></div>';">
+                        </div>
+                        <div class="project-info">
+                            <h3 data-i18n="projects.p3.title">Online Coworking Reservation Service</h3>
+                            <p class="project-desc" data-i18n="projects.p3.desc">A collaborative university-enterprise project with BRUSNIKA OOO in Russia. An online reservation platform for coworking spaces offering intuitive slot management, user interfaces, and integrated payment system mockups.</p>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>UI/UX</span>
+                            </div>
+                            <p class="project-note">
+                                Certified university partner project · Final evaluation: Excellent.
+                                Public code and demo are not shared due to confidentiality restrictions.
+                            </p>
+                            <div class="project-links">
+                                <a href="assets/Certificate of Project-Based Learning in Software Engineering.pdf" data-i18n="projects.p3.report" class="btn-text">View Certificate<i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project 4 -->
+                     <article class="project-card">
+                        <div class="project-image">
+                            <img src="images/org1.png" alt="Visual Org Structure" loading="lazy">
+                        </div>
+                        <div class="project-info">
+                            <h3 data-i18n="projects.p4.title">Visual Org Structure</h3>
+                            <p class="project-desc" data-i18n="projects.p4.desc">A software product for generating and managing complex corporate organizational structures (up to 5 levels) to overcome limitations in existing ERP systems. Includes interactive visualizations and intuitive navigation.</p>
+                            <div class="project-tags">
+                                <span>TypeScript</span>
+                                <span>React</span>
+                                <span>Figma</span>
+                                <span>UI/UX</span>
+                            </div>
+                            <p class="project-note">
+                                Certified university partner project · Final evaluation: Excellent.
+                                Public code and demo are not shared due to confidentiality restrictions.
+                            </p>
+                            <div class="project-links">
+                                <a href="assets/Certificate of Project-Based Learning in Software Engineering.pdf"  class="btn-text" data-i18n="projects.p4.report">View Certificate<i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 5 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="images/targetfin-platform.png" alt="TargetFin Grant Platform" loading="lazy">
+                        </div>
+
+                        <div class="project-info">
+                            <h3 data-i18n="projects.p5.title">
+                                TargetFin Grant Platform
+                            </h3>
+
+                            <p class="project-desc" data-i18n="projects.p5.desc">
+                                University partner project developed with Donetsk State University.
+                                Designed modules for an MVP analytical platform supporting the
+                                management and moderation of regional funding applications.
+                                Contributed to decision-support architecture, expert selection,
+                                and a machine-learning component based on fuzzy clustering.
+                                Final evaluation: Excellent.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>MVP</span>
+                                <span>Decision Support System</span>
+                                <span>Machine Learning</span>
+                                <span>Fuzzy Clustering</span>
+                            </div>
+                             <p class="project-note">
+                                Certified university partner project · Final evaluation: Excellent.
+                                Public code and demo are not shared due to confidentiality restrictions.
+                            </p>
+                            <div class="project-links">
+                                <a
+                                    href="assets/Certificate of Project-Based Learning in Software Engineering.pdf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="btn-text"
+                                     data-i18n="projects.p5.report"
+                                >
+                                    View Certificate <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title" data-i18n="skills.title">Technical Skills</h2>
+                <div class="skills-grid">
+                    
+                    <div class="skill-category">
+                        <div class="skill-header">
+                            <i class="fas fa-code"></i>
+                            <h3 data-i18n="skills.languages">Programming Languages</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li>JavaScript (ES6+)</li>
+                            <li>TypeScript</li>
+                            <li>Python</li>
+                            <li>PHP</li>
+                            <li>Dart</li>
+                            <li>SQL</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-header">
+                            <i class="fas fa-globe"></i>
+                            <h3 data-i18n="skills.web">Web & Mobile Development</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li>React / Vue.js</li>
+                            <li>Node.js</li>
+                            <li>Laravel</li>
+                            <li>Flutter</li>
+                            <li>HTML5 / CSS3</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-header">
+                            <i class="fas fa-database"></i>
+                            <h3 data-i18n="skills.databases">Databases & Infrastructure</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li>MySQL / PostgreSQL</li>
+                            <li>MongoDB</li>
+                            <li>Docker</li>
+                            <li>REST APIs</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-header">
+                            <i class="fas fa-tools"></i>
+                            <h3 data-i18n="skills.tools">Tools & Methodologies</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li>Git & GitHub</li>
+                            <li>Agile (Scrum / Kanban)</li>
+                            <li>Figma / Adobe XD</li>
+                            <li>CI/CD</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-header">
+                            <i class="fas fa-link"></i>
+                            <h3 data-i18n="skills.special">Blockchain, IoT & Modeling</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li>Hyperledger Fabric</li>
+                            <li>Smart Contracts</li>
+                            <li>IoT Integration</li>
+                            <li>UML / BPMN</li>
+                            <li data-i18n="skills.systemsanalysis">Systems Analysis</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION SECTION -->
+
+        <section id="education" class="section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="education.title">Education</h2>
+
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2024 – 2026</div>
+
+                            <h3 data-i18n="education.master.title">
+                                Master's in Software Engineering
+                            </h3>
+
+                            <h4 data-i18n="education.master.school">
+                                Ural Federal University — Yekaterinburg, Russia
+                            </h4>
+
+                            <p data-i18n="education.master.desc">
+                                Educational program: Development and Management in Software Projects.
+                                Final weighted average: 91.46/100.
+                                Excellent academic standing.
+                                Selected among the best graduates of UrFU in 2026.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2020 – 2023</div>
+
+                            <h3 data-i18n="education.bachelor.title">
+                                Studies in Computer Development
+                            </h3>
+
+                            <h4 data-i18n="education.bachelor.school">
+                                ISCAE — Nouakchott, Mauritania
+                            </h4>
+
+                            <p data-i18n="education.bachelor.desc">
+                                Overall average across validated semesters: 14.69/20.
+                                Training in algorithms, databases, software modeling,
+                                and application development.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PROFESSIONAL EXPERIENCE SECTION -->
+        <section id="experience" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title" data-i18n="experience.title">Professional Experience</h2>
+                <div class="timeline">
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date" data-i18n="experience.job1.date" >Dec 2021 – Jun 2023</div>
+                            <h3 data-i18n="experience.job1.title">Full-Stack Developer</h3>
+                            <h4 data-i18n="experience.job1.company">Coccinelle s.a.r.l | Nouakchott, Mauritania</h4>
+                            <ul class="duties-list" data-i18n-list="experience.job1.tasks">
+                                <li>Developed and deployed complete mobile applications using Flutter and Dart.</li>
+                                <li>Architected and implemented robust REST API using Laravel and PHP.</li>
+                                <li>Managed and optimized MySQL databases.</li>
+                                <li>Collaborated in agile, multidisciplinary teams.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date" data-i18n="experience.job2.date" >Jul 2022 – Sep 2022</div>
+                            <h3 data-i18n="experience.job2.title">Software Developer Intern</h3>
+                            <h4 data-i18n="experience.job2.company">Ministry of Digital Transformation, Innovation and Modernization of Administration (MTNIMA) | Nouakchott, Mauritania</h4>
+                            <ul class="duties-list" data-i18n-list="experience.job2.tasks">
+                                <li>Contributed to digitizing public administration processes through web development.</li>
+                                <li>Analyzed user requirements and designed digital solutions.</li>
+                                <li>Drafted technical documentation and assisted in user training.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        
+        <!-- RESEARCH & ACHIEVEMENTS INFO -->
+        <section id="achievements" class="section">
+            <div class="container">
+                <div class="split-layout">
+
+                <div class="split-col">
+                    <h2 class="section-title" data-i18n="research.title">
+                        Research & Publications
+                    </h2>
+
+                    <p class="research-summary" data-i18n="research.summary">
+                        My research focuses on blockchain-based traceability systems,
+                        IoT integration, distributed architectures, and formal verification.
+                        I have contributed to more than 10 scientific publications and conference papers.
+                    </p>
+
+                    <div class="research-links">
+                        <a
+                            href="https://scholar.google.com/citations?user=pJNhnIgAAAAJ&hl=fr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn btn-outline"
+                            data-i18n="research.scholar"
+                        >
+                            View Google Scholar
+                        </a>
+
+                        <a
+                            href="https://orcid.org/0009-0002-4652-999X"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn-text"
+                            data-i18n="research.orcid"
+                        >
+                            View ORCID →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="split-col">
+                    <h2 class="section-title" data-i18n="achievements.title">Achievements</h2>
+
+                    <div class="achievements-grid">
+                        <article class="achievement-card">
+                            <i class="fas fa-award"></i>
+                            <h3 data-i18n="achievements.bestGraduate.title">
+                                Best Graduate of UrFU 2026
+                            </h3>
+                            <p data-i18n="achievements.bestGraduate.desc">
+                                Selected among the best graduates of Ural Federal University for academic excellence and research activity.
+                                Ranked 57th among 43,155 students in the university-wide annual ranking.
+                            </p>
+                        </article>
+
+                        <article class="achievement-card">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3 data-i18n="achievements.pumpyansky.title">
+                                D. A. Pumpyansky Named Scholarship
+                            </h3>
+                            <p data-i18n="achievements.pumpyansky.desc">
+                                Awarded the D. A. Pumpyansky Named Scholarship in Spring 2026
+                                for academic excellence and strong university performance.
+                            </p>
+                        </article>
+
+                        <article class="achievement-card">
+                            <i class="fas fa-flask"></i>
+                            <h3 data-i18n="achievements.scientificScholarship.title">
+                                Increased Scholarship for Scientific Activity
+                            </h3>
+                            <p data-i18n="achievements.scientificScholarship.desc">
+                                Awarded an increased UrFU scholarship in 2026
+                                for research activity and scientific achievements.
+                            </p>
+                        </article>
+
+                        <article class="achievement-card">
+                            <i class="fas fa-medal"></i>
+                            <h3 data-i18n="achievements.excellenceBadge.title">
+                                Excellent Student Badge
+                            </h3>
+                            <p data-i18n="achievements.excellenceBadge.desc">
+                                Awarded the official « Отличник учёбы » badge by IRIT-RTF
+                                for consistently outstanding academic results.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section bg-light">
+            <div class="container text-center">
+                <h2 class="section-title" data-i18n="contact.title">Get In Touch</h2>
+                <p class="contact-desc" data-i18n="contact.desc">I’m open to research, engineering, and international collaboration opportunities. Whether you have a question, a proposal, or just want to say hi, feel free to reach out!</p>
+                
+                <div class="contact-methods">
+                    <a href="https://github.com/YoussefM-gif" target="_blank" class="contact-link">
+                        <div class="icon-circle"><i class="fab fa-github"></i></div>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="mailto:youssef.meissa@mail.ru" class="contact-link">
+                        <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+                        <span>youssef.meissa@mail.ru</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/youssef-meissa/" target="_blank" class="contact-link">
+                        <div class="icon-circle"><i class="fab fa-linkedin"></i></div>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; <span id="year"></span> Youssef Meissa. <span data-i18n="footer.rights">All rights reserved.</span></p>
+            <div class="footer-links">
+                <a href="https://github.com/youssefbabe" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/youssef-meissa/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
         </div>
-    </div>
-    
-    <script src="translations_simple.js"></script>
+    </footer>
+
+    <script src="translations.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>

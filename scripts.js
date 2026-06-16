@@ -1,171 +1,119 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Code existant pour le menu...
-    const toggleButton = document.querySelector('.menu-toggle');
+document.addEventListener('DOMContentLoaded', () => {
+    // Current year for footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Language Switcher Logic
+    const langSwitch = document.getElementById('lang-switch');
+    
+    // Set default language from localStorage or default to 'en'
+    let currentLang = localStorage.getItem('portfolio-lang') || 'en';
+    langSwitch.value = currentLang;
+    updateLanguage(currentLang);
+
+    langSwitch.addEventListener('change', (e) => {
+        currentLang = e.target.value;
+        localStorage.setItem('portfolio-lang', currentLang);
+        updateLanguage(currentLang);
+    });
+
+    function updateLanguage(lang) {
+        const t = window.translations[lang];
+        if (!t) return;
+
+        // Simple text elements
+        const elements = document.querySelectorAll('[data-i18n]');
+        elements.forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            const translation = getNestedValue(t, key);
+            if (translation) {
+                if (el.tagName === 'INPUT' && el.type === 'submit') {
+                    el.value = translation;
+                } else {
+                    el.innerHTML = translation;
+                }
+            }
+        });
+
+        // List elements
+        const listElements = document.querySelectorAll('[data-i18n-list]');
+        listElements.forEach(cl => {
+            const key = cl.getAttribute('data-i18n-list');
+            const listArr = getNestedValue(t, key);
+            if (listArr && Array.isArray(listArr)) {
+                cl.innerHTML = '';
+                listArr.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    cl.appendChild(li);
+                });
+            }
+        });
+    }
+
+    function getNestedValue(obj, path) {
+        return path.split('.').reduce((acc, part) => acc && acc[path] ? acc[path] : (acc ? acc[part] : undefined), obj);
+    }
+
+    // Mobile Menu Toggle
+    const mobileBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
 
-    if (toggleButton && navLinks) {
-        toggleButton.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-    }
-
-    // Vérification si le formulaire existe avant d'ajouter l'événement
-    const form = document.querySelector('form');
-    if (form) {
-        form.addEventListener('submit', (e) => {
-            const email = document.querySelector('#email').value;
-            const name = document.querySelector('#name').value;
-
-            if (!email.includes('@')) {
-                alert('Veuillez entrer une adresse email valide.');
-                e.preventDefault();
-            }
-
-            if (name.trim() === '') {
-                alert('Veuillez entrer votre nom.');
-                e.preventDefault();
-            }
-        });
-    }
-
-    // GESTION SIMPLE DE LA VIDÉO DEMO
-    const demoBtn = document.querySelector('.demo-btn');
-    const demoModal = document.getElementById('demo-modal');
-    
-    console.log('Bouton démo:', demoBtn);
-    console.log('Modal démo:', demoModal);
-    
-    if (demoBtn && demoModal) {
-        demoBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            console.log('Clic sur démo - ouverture modal');
-            
-            // Ouvrir le modal
-            demoModal.style.display = 'flex';
-            demoModal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-            
-            // Configurer et démarrer la vidéo
-            const video = demoModal.querySelector('#mauriturgence-video');
-            if (video) {
-                // Attendre que la vidéo soit prête
-                video.addEventListener('loadeddata', function() {
-                    // Réinitialiser la vidéo au début
-                    video.currentTime = 0;
-                    // Définir la vitesse à 1.5x
-                    video.playbackRate = 1.5;
-                    // Unmute pour la lecture
-                    video.muted = false;
-                    console.log('Vidéo prête: vitesse 1.5x configurée');
-                });
-                
-                // Si la vidéo est déjà chargée
-                if (video.readyState >= 3) {
-                    video.currentTime = 0;
-                    video.playbackRate = 1.5;
-                    video.muted = false;
-                }
-                
-                // Lancer la lecture automatiquement
-                video.play().catch(function(error) {
-                    console.log('Lecture automatique bloquée par le navigateur:', error);
-                    // Afficher un message à l'utilisateur
-                    video.muted = false;
-                });
-                
-                console.log('Vidéo lancée en automatique à 1.5x');
-            }
-        });
-        
-        // Fermer le modal
-        const closeBtn = demoModal.querySelector('.close-info-modal');
-        const closeModalBtn = demoModal.querySelector('.close-modal-btn');
-        
-        if (closeBtn) {
-            closeBtn.addEventListener('click', function() {
-                console.log('Fermeture modal');
-                demoModal.style.display = 'none';
-                demoModal.classList.remove('active');
-                document.body.style.overflow = 'auto';
-                const video = demoModal.querySelector('video');
-                if (video) video.pause();
-            });
-        }
-        
-        if (closeModalBtn) {
-            closeModalBtn.addEventListener('click', function() {
-                console.log('Fermeture modal via bouton');
-                demoModal.style.display = 'none';
-                demoModal.classList.remove('active');
-                document.body.style.overflow = 'auto';
-                const video = demoModal.querySelector('video');
-                if (video) video.pause();
-            });
-        }
-        
-        // Fermer en cliquant à l'extérieur
-        demoModal.addEventListener('click', function(e) {
-            if (e.target === demoModal) {
-                demoModal.style.display = 'none';
-                demoModal.classList.remove('active');
-                document.body.style.overflow = 'auto';
-                const video = demoModal.querySelector('video');
-                if (video) video.pause();
-            }
-        });
-    }
-
-    // Fonctionnalité pour agrandir les diagrammes UML
-    const modal = document.createElement('div');
-    modal.className = 'diagram-modal';
-    modal.innerHTML = `
-        <div class="diagram-modal-content">
-            <button class="close-modal">&times;</button>
-            <img src="" alt="Diagramme agrandi">
-        </div>
-    `;
-    document.body.appendChild(modal);
-
-    const modalImg = modal.querySelector('img');
-    const closeBtn = modal.querySelector('.close-modal');
-
-    // Ajouter l'événement de clic sur toutes les images de diagrammes
-    const diagramImages = document.querySelectorAll('.diagram-image');
-    diagramImages.forEach(img => {
-        img.addEventListener('click', function() {
-            modal.style.display = 'block';
-            modalImg.src = this.src;
-            modalImg.alt = this.alt;
-            document.body.style.overflow = 'hidden';
-        });
-    });
-
-    // Fermer le modal des diagrammes
-    closeBtn.addEventListener('click', closeDiagramModal);
-    modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-            closeDiagramModal();
+    mobileBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        const icon = mobileBtn.querySelector('i');
+        if (navLinks.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
         }
     });
 
-    // Fermer avec la touche Escape
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            if (modal.style.display === 'block') {
-                closeDiagramModal();
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            if(window.innerWidth <= 768) {
+                navLinks.classList.remove('active');
+                mobileBtn.querySelector('i').classList.remove('fa-times');
+                mobileBtn.querySelector('i').classList.add('fa-bars');
             }
-            if (demoModal && demoModal.style.display === 'flex') {
-                demoModal.style.display = 'none';
-                demoModal.classList.remove('active');
-                document.body.style.overflow = 'auto';
-                const video = demoModal.querySelector('video');
-                if (video) video.pause();
-            }
+        });
+    });
+
+    // Navbar scroll effect
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.5)';
+            navbar.style.backgroundColor = 'rgba(10, 25, 47, 0.98)';
+        } else {
+            navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.3)';
+            navbar.style.backgroundColor = 'rgba(10, 25, 47, 0.95)';
         }
     });
 
-    function closeDiagramModal() {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    }
+    // Active link highlighting on scroll
+    const sections = document.querySelectorAll('section');
+    const navItems = document.querySelectorAll('.nav-links a');
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+        const scrollY = window.scrollY;
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (scrollY >= (sectionTop - 200)) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navItems.forEach(a => {
+            a.classList.remove('active');
+            if (a.getAttribute('href').includes(current)) {
+                a.classList.add('active');
+            }
+        });
+    });
 });
